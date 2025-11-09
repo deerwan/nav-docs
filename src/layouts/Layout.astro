@@ -1,0 +1,50 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = '基于 Cloudflare Pages + D1 + Vue 3 构建的现代化书签管理系统。整理、分类、快速访问你的书签，让浏览更高效。' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="书签管理,书签,收藏夹,Cloudflare Pages,Vue 3,浏览器扩展" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="antialiased bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--primary: #6366f1;
+		--primary-dark: #4f46e5;
+		--primary-light: #a5b4fc;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		html {
+			color-scheme: dark;
+		}
+	}
+</style>
+
