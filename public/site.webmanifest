@@ -1,0 +1,21 @@
+{
+	"name": "Nav - 书签管理工具",
+	"short_name": "Nav",
+	"description": "简洁美观的书签管理工具",
+	"icons": [
+		{
+			"src": "/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#6366f1",
+	"background_color": "#ffffff",
+	"display": "standalone"
+}
+
